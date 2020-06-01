@@ -140,7 +140,7 @@ for line in open("json_formated.txt", "r").readlines():
 
     i += 1
 
-#creastes a hinden markov model witht he tranning data
+#creates a hiden markov model with the tranning data
 startprob, transmat, means, covars = estimate_parameters(x, y)
 model = hmm.GaussianHMM(5, "full")
 model.startprob_ = startprob
@@ -148,7 +148,7 @@ model.transmat_ = transmat
 model.means_  = means
 model.covars_ = covars
 
-#l0ops through the testing data and writes to the predections file
+#loops through the testing data and writes to the predections file
 f = open ("HW9_Q4_predictions.txt", "w")
 for line in open("HW9_Q4_testing.txt", "r").readlines():
     formated_test = [[0 for i in range(1)] for j in range(10)]
